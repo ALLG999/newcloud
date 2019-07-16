@@ -11,29 +11,23 @@
                                 <key>kind</key>
                                 <string>software-package</string>
                                 <key>url</key>
-                                <string>https://dl.kzwr.com/Down/fiVXZHVqaHdXZGVvaCU9JXNkcWJpbG9oYm9sdndiNCUvJUlvZGpRZHBoJT0lOjY1Z2c8NTc5Zjo6c3o1bm86MWxzZCUvJUlsb2hRZHBoJT0lNzFsc2QlLyVWa3J6U2RxaG8lPXd1eGgvJUlsb2hPaHFqd2slPTQzMzM4PDs2PC8lSWxvaE5ofCU9JVdMXU1VTzU4SFM8SUxHMzhSVzVcN1dKVUklLyVOaHxWbH1oSHF4cCU9NTg5LyVIe3NsdWhnJT0lNTM0PDAzOjA1Nlc1NT01Nz00PDE4PDU5Ozw8LjM7PTMzJS8lWGxnJT02NTc2Ni8lT2h5aG8lPTPCgA==.ipa</string>
-                            </dict>
-                            <dict>
-                                <key>kind</key>
-                                <string>display-image</string>
-                                <key>needs-shine</key>
-                                <true/>
-                                <key>url</key>
-                                <string>https://www.ispoofer.com/wp-content/uploads/2018/11/pogo-256x256bb.jpg</string>
-                            </dict>
-                        </array>
-                        <key>metadata</key>
-                        <dict>
-                            <key>bundle-identifier</key>
-                            <string>com.ispoofer.pogo</string>
-                            <key>bundle-version</key>
-                            <string>0.127.2</string>
-                            <key>kind</key>
-                            <string>software</string>
-                            <key>title</key>
-                            <string>iSpoofer for POGO</string>
-                        </dict>
-                    </dict>
-                </array>
-            </dict>
-        </plist>
+                                <string>https://www.newcloud.cf/4.html</string>
+								</dict>
+</array>
+<key>metadata</key>
+<dict>
+<key>bundle-identifier</key>
+<string>com.nianticlabs.pokemongo</string>
+<key>bundle-version</key>
+<string>0.137.1b</string>
+<key>kind</key>
+<string>software</string>
+<key>subtitle</key>
+<string>下载</string>
+<key>title</key>
+<string> iSpoofer PokemonGO</string>
+</dict>
+</dict>
+</array>
+</dict>
+</plist>
