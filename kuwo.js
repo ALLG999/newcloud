@@ -6,7 +6,7 @@
 *******************************
 [rewrite_local]
 # 酷我音乐 解锁VIP & 去广告
-^https?:\/\/(vip|musicpay|account)\.kuwo\.cn\/.*\/(vip|user)\/(vipUser|verifyUser) url script-response-body kuwo_vip.js
+^https?:\/\/(vip|musicpay|account)\.kuwo\.cn\/.*\/(vip|user)\/(vipUser|verifyUser) url script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/kuwo.js
 
 [mitm]
 hostname = *.kuwo.cn
