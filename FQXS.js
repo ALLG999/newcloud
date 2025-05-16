@@ -26,7 +26,11 @@
 ^https?:\/\/normal\.zijieapi\.com - reject
 ^https?:\/\/lq\.fqnovrl\.com - reject 
 ^https?:\/\/normal\.fqnovrl\.com - reject 
+^https?:\/\/api\.pangolin-sdk-toutiao\.com - reject 
 ^https?:\/\/api\.pangolin-sdk-toutiao1\.com - reject 
+^https?:\/\/lq\.snssdk\.com - reject 
+^https?:\/\/i-lq\.snssdk\.com - reject 
+^https?:\/\/api\.fqnovrl\.com - reject 
 [filter_local]
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
@@ -42,7 +46,9 @@ DOMAIN,api2-normal-sinfonlinea.fqbovel.com,REJECT
 DOMAIN,api3-normal-sinfonlinea.fqbovel.com,REJECT
 DOMAIN,api4-normal-sinfonlinea.fqbovel.com,REJECT
 DOMAIN,api5-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
+DOMAIN,i-lq-snssdk.com,REJECT
 DOMAIN-SUFFIX,byteimg.com,DIRECT
 DOMAIN,i.snssdk.com,REJECT
 DOMAIN,i-lq.snssdk.com,REJECT
