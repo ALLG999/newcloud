@@ -23,9 +23,26 @@
 ^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
 ^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
 ^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
+^https?:\/\/normal\.zijieapi\.com - reject
+^https?:\/\/lq\.fqnovrl\.com - reject 
+^https?:\/\/normal\.fqnovrl\.com - reject 
+^https?:\/\/api\.pangolin-sdk-toutiao1\.com - reject 
 [filter_local]
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
+DOMAIN,ads0-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads1-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads2-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads3-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads4-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads5-normal-lq.zijieapi.com,REJECT
+DOMAIN,api0-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api1-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api2-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api3-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api4-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api5-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
 DOMAIN-SUFFIX,byteimg.com,DIRECT
 DOMAIN,i.snssdk.com,REJECT
 DOMAIN,i-lq.snssdk.com,REJECT
@@ -71,14 +88,14 @@ DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
 DOMAIN-SUFFIX,byteorge.com,REJECT
 DOMAIN-SUFFIX,bytegoofy.com,REJECT
 DOMAIN-SUFFIX,bytedance.com,REJECT
-DOMAIN-SUFFIX,360buyimg.com,REJECT
-DOMAIN-SUFFIX,buysecm.com,REJECT
-DOMAIN-SUFFIX,snssdk.com,REJECT
-DOMAIN-SUFFIX,fqnovel.com,REJECT
-DOMAIN-SUFFIX,fqnovelpic.com,REJECT
-DOMAIN-SUFFIX,byteimg.com,REJECT
-DOMAIN-SUFFIX,bdurl.net,REJECT
-DOMAIN-SUFFIX,ecombdapi.com,REJECT
+DOMAIN,360buyimg.com,REJECT
+DOMAIN,buysecm.com,REJECT
+DOMAIN,snssdk.com,REJECT
+DOMAIN,fqnovel.com,REJECT
+DOMAIN,fqnovelpic.com,REJECT
+DOMAIN,byteimg.com,REJECT
+DOMAIN,bdurl.net,REJECT
+DOMAIN,ecombdapi.com,REJECT
 IP-CIDR,49.71.37.101/32,REJECT,no-resolve
 IP-CIDR,117.71.105.23/32,REJECT,no-resolve
 IP-CIDR,218.94.207.205/32,REJECT,no-resolve
