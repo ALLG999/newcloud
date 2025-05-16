@@ -74,6 +74,11 @@ DOMAIN-SUFFIX,bytedance.com,REJECT
 DOMAIN-SUFFIX,360buyimg.com,REJECT
 DOMAIN-SUFFIX,buysecm.com,REJECT
 DOMAIN-SUFFIX,snssdk.com,REJECT
+DOMAIN-SUFFIX,fqnovel.com,REJECT
+DOMAIN-SUFFIX,fqnovelpic.com,REJECT
+DOMAIN-SUFFIX,byteimg.com,REJECT
+DOMAIN-SUFFIX,bdurl.net,REJECT
+DOMAIN-SUFFIX,ecombdapi.com,REJECT
 IP-CIDR,49.71.37.101/32,REJECT,no-resolve
 IP-CIDR,117.71.105.23/32,REJECT,no-resolve
 IP-CIDR,218.94.207.205/32,REJECT,no-resolve
@@ -81,4 +86,4 @@ IP-CIDR,117.92.229.188/32,REJECT,no-resolve
 IP-CIDR,101.36.166.16/32,REJECT,no-resolve
 IP-CIDR,180.96.2.114/32,REJECT,no-resolve
 [MITM]
-hostname = %APPEND% .pangolin-sdk-toutiao,.pangolin-sdk-toutiao.,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
+hostname = %APPEND% .pangolin-sdk-toutiao,.ecombdapi.com,.bdurl.net,.byteimg.com,.fqnovel.com,.fqnovelpic.com,.pangolin-sdk-toutiao.,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
