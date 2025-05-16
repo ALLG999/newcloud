@@ -81,4 +81,4 @@ IP-CIDR,117.92.229.188/32,REJECT,no-resolve
 IP-CIDR,101.36.166.16/32,REJECT,no-resolve
 IP-CIDR,180.96.2.114/32,REJECT,no-resolve
 [MITM]
-hostname = %APPEND% .pangolin-sdk-toutiao,.pangolin-sdk-toutiao.,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,*snssdk.com,*default.ixigua.com,.360buyimg.com,*buysecm.com
+hostname = %APPEND% .pangolin-sdk-toutiao,.pangolin-sdk-toutiao.,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
