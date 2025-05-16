@@ -2,11 +2,12 @@
 脚本功能：番茄去广告
 下载地址：appstore
 软件版本：所有
-脚本作者：未知
-更新时间：2023-10-31
-使用声明：⚠️好像并没什么卵用，可能是我使用方法有问题吧~
+脚本作者：ALLG
+更新时间：2025-05-16
+使用声明：⚠️卸载软件连接圈X再打开番茄！
 */
-
+#!name=番茄小说
+#!desc=番茄小说去广告
 [rewrite_local]
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
 ^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
