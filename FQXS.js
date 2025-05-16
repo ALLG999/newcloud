@@ -85,5 +85,9 @@ IP-CIDR,218.94.207.205/32,REJECT,no-resolve
 IP-CIDR,117.92.229.188/32,REJECT,no-resolve
 IP-CIDR,101.36.166.16/32,REJECT,no-resolve
 IP-CIDR,180.96.2.114/32,REJECT,no-resolve
+DOMAIN-KEYWORD,dig.zjurl.cn
+DOMAIN-KEYWORD,dig.bdurl.net
+AND,((DOMAIN-KEYWORD,zijieapi),(DOMAIN-KEYWORD,ad))
+DOMAIN-KEYWORD,is.snssdk.com
 [MITM]
-hostname = %APPEND% .pangolin-sdk-toutiao,.ecombdapi.com,.bdurl.net,.byteimg.com,.fqnovel.com,.fqnovelpic.com,.pangolin-sdk-toutiao.,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
+hostname = %APPEND% .pangolin-sdk-toutiao,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
