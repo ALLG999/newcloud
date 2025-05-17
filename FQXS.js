@@ -1,4 +1,5 @@
-/*
+
++/*
 脚本功能：番茄去广告
 下载地址：appstore
 软件版本：所有
@@ -28,6 +29,11 @@
 ^https?:\/\/.*\.fqnovrl\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200
+
+^https?:\/\/.*\.*toutiao.*\.com\/.*\.png$ url reject-200 
+^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpg$ url reject-200 
+^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpeg$ url reject-200 
+         
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
 ^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
 ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
