@@ -39,9 +39,16 @@
 ^https?:\/\/.*\.snssdk.com url reject-200
 ^https?:\/\/mcs.snssdk.com url reject-200
 ^https?:\/\/.*\.fqnovel.com url reject-200
+^https?:\/\/.*\.fqnovelpic.com url reject-200
 ^https?:\/\/.*\.bytescm.com url reject-200
 ^https?:\/\/.*\.byteimg.com url reject-200
 ^https?:\/\/.*\.safebrowsing.apple url reject-200
+^https?:\/\/.*\.amemv.com url reject-200
+^https?:\/\/.*\.bytegecko.com url reject-200
+^https?:\/\/.*\.bdurl.net url reject-200
+^https?:\/\/.*\.ecombdapi.com url reject-200
+^https?:\/\/.*\.ecombdimg.com url reject-200
+
 ^https?:\/\/.*\.pangolin-sdk-toutiao-a.com url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao-b.com url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao-c.com url reject-200
