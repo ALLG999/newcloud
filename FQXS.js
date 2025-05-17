@@ -31,7 +31,7 @@
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
 ^https?:\/\/(.*pangolin-sdk-toutiao.*)\.com\/.* url reject-200
-
+^https?:\/\/.*\.ecombdimg.com url reject-200
 ^https?:\/\/.*\.snssdk\.com url reject-200
 ^https?:\/\/.*\.fqnovel\.com url reject-200
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
