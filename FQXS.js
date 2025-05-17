@@ -14,6 +14,8 @@
         5.18
 使用声明：⚠️连接圈X再打开番茄！广告太他妈的多了.
          ⚠️开启本脚本可能导致抖音直播无法正常使用！！！
+         
+         配合食用更香哦！https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list
 */
 #!name=番茄小说
 #!desc=番茄小说去广告
