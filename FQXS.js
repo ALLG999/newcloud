@@ -18,8 +18,11 @@
 
 ^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
 //^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
+^https?:\/\/.*\.ecombdimg\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.bdurl\.net\/.*ad.* url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
+^https?:\/\/(.*pangolin-sdk-toutiao)\.com\/.* url reject-200
 ^https?:\/\/.*\.snssdk\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.fqnovrl\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
@@ -128,4 +131,4 @@ DOMAIN-KEYWORD,dig.bdurl.net
 AND,((DOMAIN-KEYWORD,zijieapi),(DOMAIN-KEYWORD,ad))
 DOMAIN-KEYWORD,is.snssdk.com
 [MITM]
-hostname = %APPEND% .pangolin-sdk-toutiao,*.douyin.com,*.ihunantv.com,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
+hostname = %APPEND% .pangolin-sdk-toutiao,*.ecombdimg.com,*.douyin.com,*.ihunantv.com,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
