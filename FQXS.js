@@ -33,6 +33,10 @@
 ^https?:\/\/.*\.*toutiao.*\.com\/.*\.png$ url reject-200 
 ^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpg$ url reject-200 
 ^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpeg$ url reject-200 
+
+^https?:\/\/.*zijieapi\.com.* url reject if-header .*live.*
+^https?:\/\/.*zijieapi\.com.* url reject if-header .*img.*
+
          
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
 ^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
