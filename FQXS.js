@@ -36,7 +36,11 @@
 ^https?:\/\/.*\.snssdk\.com url reject-200
 ^https?:\/\/.*\.fqnovel\.com url reject-200
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.zijieapi\.com\/.*api.* url reject-200
+^https?:\/\/.*\.zijieapi\.com\/.*sdk.* url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*api.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*sdk.* url reject-200
 ^https?:\/\/.*\.wcp.taobao.com\/.*adstrack.* url reject-200
 
 ^https?:\/\/.*\.*pangolin-sdk-toutiao1.*\.com*\/.* url reject-200
