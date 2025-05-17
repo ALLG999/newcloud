@@ -15,7 +15,11 @@
 ^https?:\/\/.*\/(user\/vip_info|vip\/user_info).*$ script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
 ^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
 
-
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
+^https?:\/\/.*\.snssdk\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.fqnovrl\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
 ^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
 ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
