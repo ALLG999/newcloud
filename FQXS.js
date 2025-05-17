@@ -22,7 +22,7 @@
 ^https?:\/\/.*\.bdurl\.net\/.*ad.* url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
-^https?:\/\/(.*pangolin-sdk-toutiao)\.com\/.* url reject-200
+^https?:\/\/(.*pangolin-sdk-toutiao.*)\.com\/.* url reject-200
 ^https?:\/\/.*\.snssdk\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.fqnovrl\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
