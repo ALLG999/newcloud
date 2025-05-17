@@ -25,6 +25,7 @@
 //^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
 
 ^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
+//⬇️如果抖音直播频繁刷出，可以考虑开启这一条，毁天灭地。
 //^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
 ^https?:\/\/.*\.ecombdimg\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.bdurl\.net\/.*ad.* url reject-200
