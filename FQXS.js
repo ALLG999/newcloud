@@ -14,7 +14,6 @@
 #!name=番茄小说
 #!desc=番茄小说去广告
 [rewrite_local]
-^https?:\/\/.*ad.* url reject-200 tag=番茄广告拦截, apps=com.dragon.read
 
 # 本地svip显示（并没有这能力做出来，哈哈哈）
 //^https?:\/\/.*\/(user\/vip_info|vip\/user_info).*$ script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
