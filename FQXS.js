@@ -63,6 +63,7 @@
 ^https?:\/\/i-lq\.snssdk\.com - reject 
 ^https?:\/\/api\.fqnovrl\.com - reject 
 [filter_local]
+PROCESS-NAME,com.dragon.read,番茄小说广告
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
 DOMAIN,ads0-normal-lq.zijieapi.com,REJECT
