@@ -7,6 +7,7 @@
 测试版本：5.6.5
 降级id：854680019
 使用声明：⚠️卸载软件连接圈X再打开番茄！广告太他妈的多了，降级
+         ⚠️开启本脚本可能导致抖音无法正常使用！！！
 */
 #!name=番茄小说
 #!desc=番茄小说去广告
@@ -15,6 +16,8 @@
 ^https?:\/\/.*\/(user\/vip_info|vip\/user_info).*$ script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
 ^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
 
+^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
 ^https?:\/\/.*\.snssdk\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.fqnovrl\.com\/.*ad.* url reject-200
@@ -124,4 +127,4 @@ DOMAIN-KEYWORD,dig.bdurl.net
 AND,((DOMAIN-KEYWORD,zijieapi),(DOMAIN-KEYWORD,ad))
 DOMAIN-KEYWORD,is.snssdk.com
 [MITM]
-hostname = %APPEND% .pangolin-sdk-toutiao,*.ihunantv.com,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
+hostname = %APPEND% .pangolin-sdk-toutiao,*.douyin.com,*.ihunantv.com,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com
