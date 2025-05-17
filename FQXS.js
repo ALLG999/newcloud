@@ -13,8 +13,8 @@
 [rewrite_local]
 # 本地svip显示（并没有这能力做出来，哈哈哈）
 ^https?:\/\/.*\/(user\/vip_info|vip\/user_info).*$ script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
-^https:\/\/api\.dragon\.read\.com\/vip\/status url response-body "is_vip\":false" "is_vip\":true"
-  
+^https:\/\/api\.zijieapi\.fqnovrl\.pglstatp-toutiao\.com\/vip\/status url response-body "is_vip\":false" "is_vip\":true"
+
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
 ^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
 ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
