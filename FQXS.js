@@ -31,8 +31,9 @@
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
 ^https?:\/\/(.*pangolin-sdk-toutiao.*)\.com\/.* url reject-200
+
 ^https?:\/\/.*\.snssdk\.com url reject-200
-^https?:\/\/.*\.fqnovrl\.com url reject-200
+^https?:\/\/.*\.fqnovel\.com url reject-200
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.wcp.taobao.com\/.*adstrack.* url reject-200
@@ -60,13 +61,13 @@
 ^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
 ^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
 ^https?:\/\/normal\.zijieapi\.com - reject
-^https?:\/\/lq\.fqnovrl\.com - reject 
-^https?:\/\/normal\.fqnovrl\.com - reject 
+^https?:\/\/lq\.fqnovel\.com - reject 
+^https?:\/\/normal\.fqnovel\.com - reject 
 ^https?:\/\/api\.pangolin-sdk-toutiao\.com - reject 
 ^https?:\/\/api\.pangolin-sdk-toutiao1\.com - reject 
 ^https?:\/\/lq\.snssdk\.com - reject 
 ^https?:\/\/i-lq\.snssdk\.com - reject 
-^https?:\/\/api\.fqnovrl\.com - reject 
+^https?:\/\/api\.fqnovel\.com - reject 
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
