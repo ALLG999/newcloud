@@ -11,7 +11,7 @@
 #!name=番茄小说
 #!desc=番茄小说去广告
 [rewrite_local]
-# 本地svip显示
+# 本地svip显示（并没有这能力做出来，哈哈哈）
 ^https?:\/\/.*\/(user\/vip_info|vip\/user_info).*$ script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
 
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
