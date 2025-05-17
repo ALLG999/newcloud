@@ -30,6 +30,7 @@
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200
 
+^https?:\/\/.*\.*pangolin-sdk-toutiao.com.*\/.* url reject-200
 ^https?:\/\/.*\.*toutiao.*\.com\/.*\.png$ url reject-200 
 ^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpg$ url reject-200 
 ^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpeg$ url reject-200 
