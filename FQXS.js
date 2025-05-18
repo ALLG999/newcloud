@@ -50,15 +50,7 @@
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
 
-# 拦截关键词相关的域名
-DOMAIN-KEYWORD,api,REJECT
-DOMAIN-KEYWORD,sdk,REJECT
-DOMAIN-KEYWORD,ad,REJECT
-DOMAIN-KEYWORD,video,REJECT
-DOMAIN-KEYWORD,img,REJECT
-DOMAIN-KEYWORD,live,REJECT
-
-# 已知拦截域名
+# 已知广告域名精准拦截
 DOMAIN-KEYWORD,zijieapi,REJECT
 DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
 DOMAIN-KEYWORD,dig.bdurl.net,REJECT
@@ -86,7 +78,7 @@ DOMAIN,bytetos.com,REJECT
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
 
-# 白名单，确保小说正常加载
+# 白名单，确保正常加载
 DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
 DOMAIN,tp-pay.snssdk.com,DIRECT
 DOMAIN,lf-cdn-tos.byescm.com,DIRECT
