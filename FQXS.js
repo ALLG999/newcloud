@@ -79,7 +79,7 @@ DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
 DOMAIN,byteimg.com,REJECT
 DOMAIN,bdurl.net,REJECT
-DOMAIN,fqnovel.com,REJECT
+//DOMAIN,fqnovel.com,REJECT
 DOMAIN,fqnovelpic.com,REJECT
 DOMAIN,ecombdimg.com,REJECT
 DOMAIN,bytegoofy.com,REJECT
