@@ -1,5 +1,5 @@
 
-+/*
+/*
 脚本功能：番茄去广告
 下载地址：appstore
 软件版本：所有
@@ -32,11 +32,35 @@
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
 ^https?:\/\/(.*pangolin-sdk-toutiao.*)\.com\/.* url reject-200
+^https?:\/\/.*\.oceanengine.com url reject-200
+^https?:\/\/.*\.zijieapi.com url reject-200
+^https?:\/\/.*\.fqnovelpic.com url reject-200
 ^https?:\/\/.*\.ecombdimg.com url reject-200
-^https?:\/\/.*\.snssdk\.com url reject-200
-^https?:\/\/.*\.fqnovel\.com url reject-200
+^https?:\/\/.*\.snssdk.com url reject-200
+^https?:\/\/mcs.snssdk.com url reject-200
+^https?:\/\/.*\.fqnovel.com url reject-200
+^https?:\/\/.*\.fqnovelpic.com url reject-200
+^https?:\/\/.*\.bytescm.com url reject-200
+^https?:\/\/.*\.byteimg.com url reject-200
+^https?:\/\/.*\.safebrowsing.apple url reject-200
+^https?:\/\/.*\.amemv.com url reject-200
+^https?:\/\/.*\.bytegecko.com url reject-200
+^https?:\/\/.*\.bdurl.net url reject-200
+^https?:\/\/.*\.ecombdapi.com url reject-200
+^https?:\/\/.*\.ecombdimg.com url reject-200
+
+^https?:\/\/.*\.pangolin-sdk-toutiao-a.com url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao-b.com url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao-c.com url reject-200
+^https?:\/\/.*\.bytegecko.com url reject-200
+
+
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.zijieapi\.com\/.*api.* url reject-200
+^https?:\/\/.*\.zijieapi\.com\/.*sdk.* url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*api.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*sdk.* url reject-200
 ^https?:\/\/.*\.wcp.taobao.com\/.*adstrack.* url reject-200
 
 ^https?:\/\/.*\.*pangolin-sdk-toutiao1.*\.com*\/.* url reject-200
