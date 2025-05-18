@@ -50,11 +50,9 @@
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
 
-[filter_local]
-PROCESS-NAME,com.dragon.read,番茄小说广告
-
 # 小说正常接口白名单
 DOMAIN,ecombdapi.com,DIRECT
+DOMAIN,fqnovel.com,DIRECT
 
 # 关键词拦截（广告域名关键词）
 DOMAIN-KEYWORD,ad,REJECT
