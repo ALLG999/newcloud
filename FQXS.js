@@ -53,6 +53,11 @@
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告屏蔽
 
+# ✅ 白名单域名（重要接口允许通过）
+DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
+DOMAIN,tp-pay.snssdk.com,DIRECT
+DOMAIN,lf-cdn-tos.byescm.com,DIRECT
+
 # 🔥 关键词拦截（保留核心，避免过度）
 DOMAIN-KEYWORD,ad,REJECT
 DOMAIN-KEYWORD,sdk,REJECT
@@ -87,11 +92,6 @@ DOMAIN,volccdn.com,REJECT
 DOMAIN,bytetos.com,REJECT
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
-
-# ✅ 白名单域名（重要接口允许通过）
-DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
-DOMAIN,tp-pay.snssdk.com,DIRECT
-DOMAIN,lf-cdn-tos.byescm.com,DIRECT
 
 [MITM]
 hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
