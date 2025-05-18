@@ -52,6 +52,9 @@
 ^https?:\/\/.*\.pangolin-sdk-toutiao-a.com url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao-b.com url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao-c.com url reject-200
+^https?:\/\/.*\.bytegecko.com url reject-200
+
+
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.zijieapi\.com\/.*api.* url reject-200
 ^https?:\/\/.*\.zijieapi\.com\/.*sdk.* url reject-200
