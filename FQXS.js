@@ -29,66 +29,17 @@
 # 可选：抖音直播彻底拦截（副作用：直播功能无法使用）
 # ^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
 
-# 典型抖音及头条API拦截示例
-^https?:\/\/.*pangolin-sdk-toutiao.*\/.* url reject-200
-^https?:\/\/.*bytegecko.com.* url reject-200
-^https?:\/\/.*volcanicengine.com.* url reject-200
-^https?:\/\/.*zijieapi.com.* url reject-200
-^https?:\/\/.*fqnovel.* url reject-200
-^https?:\/\/.*byteimg.com.* url reject-200
-^https?:\/\/.*snssdk.com.* url reject-200
-
 [filter_remote]
-# 通过关键词精准拦截广告请求
+# 白名单，小说正常接口
+DOMAIN,api5-normal-sinfonlinea.fqnovel.com,DIRECT
+
+# 关键词拦截
 DOMAIN-KEYWORD,api,REJECT
 DOMAIN-KEYWORD,sdk,REJECT
 DOMAIN-KEYWORD,ad,REJECT
 DOMAIN-KEYWORD,video,REJECT
 DOMAIN-KEYWORD,img,REJECT
 DOMAIN-KEYWORD,live,REJECT
-
-# 以下域名通常涉及广告和追踪，阻断它们
-DOMAIN,p6-ad-sign.byteimg.com,REJECT
-DOMAIN,p9-ad-sign.byteimg.com,REJECT
-DOMAIN,ads0-normal-lq.zijieapi.com,REJECT
-DOMAIN,ads1-normal-lq.zijieapi.com,REJECT
-DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
-DOMAIN,mcs.snssdk.com,REJECT
-DOMAIN,tnc0-aliec1.snssdk.com,REJECT
-DOMAIN,tnc0-aliec1.zijieapi.com,REJECT
-DOMAIN,normal.zijieapi.com,REJECT
-
-# 其他已知广告域名
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
-DOMAIN-SUFFIX,byteorge.com,REJECT
-DOMAIN-SUFFIX,bytegoofy.com,REJECT
-DOMAIN-SUFFIX,bytedance.com,REJECT
-DOMAIN-SUFFIX,snssdk.com,REJECT
-DOMAIN-SUFFIX,fqnovel.com,REJECT
-DOMAIN-SUFFIX,fqnovelpic.com,REJECT
-DOMAIN-SUFFIX,byteimg.com,REJECT
-DOMAIN-SUFFIX,bdurl.net,REJECT
-DOMAIN-SUFFIX,ecombdapi.com,REJECT
-
-[mitm]
-hostname = 
-  *.pangolin-sdk-toutiao.com,
-  *.ecombdimg.com,
-  *.douyin.com,
-  *.snssdk.com,
-  *.zijieapi.com,
-  *.byteimg.com,
-  *.fqnovel.com,
-  *.fqnovelpic.com,
-  *.bytedance.com,
-  *.pstatp.com,
-  *.pglstatp-toutiao.com,
-  *.volcanicengine.com,
-  *.volccdn.com,
-  *.bytegecko.com,
-  *.bytegoofy.com,
-  bdurl.net,
-  ecombdapi.com
 
 
   
