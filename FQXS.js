@@ -19,7 +19,7 @@
 */
 #!name=番茄小说
 #!desc=番茄小说去广告
-  /*
+
 [rewrite_local]
 # VIP伪装 & 抖音/番茄小说广告脚本替换
 ^https?:\/\/.*\/(user\/vip_info|vip\/user_info).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
@@ -30,43 +30,34 @@
 
 # 可选：抖音直播彻底拦截（副作用：直播功能无法使用）
 ^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
+  
+[filter_remote]
+# 精准广告拦截，避免误伤小说请求
+^https?:\/\/mcs\.snssdk\.com url reject-200
+^https?:\/\/normal\.(zijieapi|fqnovel)\.com url reject-200
+^https?:\/\/lq\.(fqnovel|snssdk)\.com url reject-200
+^https?:\/\/i-lq\.snssdk\.com url reject-200
 
-# 广告域名精准拦截
-^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|fqnovelpic|fqnovel|byteimg|oceanengine|bytescm|bytetos|volccdn|volcengine|bytegecko|bytegoofy)\.com\/.*ad.* url reject-200
-^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|fqnovel|byteimg)\.com\/.* url reject-200
-
-# 抖音视频广告资源
+# 视频广告资源
 ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad|web\.business\.image|ad-app-package)\/.+ - reject
 ^https?:\/\/.+\.byteimg.com\/tos-cn-i-1yzifmftcy\/.+\.jpeg - reject
 ^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from=ad - reject
 ^https?:\/\/.+\.snssdk\.com\/api\/ad\/.+ - reject
 
-# 请求头劫持脚本（伪装 UA）
+# 请求头劫持脚本（用于抖音/番茄）
 ^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
 
-# 加载缓慢/无响应的广告平台
-^https?:\/\/mcs\.snssdk\.com url reject-200
-^https?:\/\/(normal|lq)\.(zijieapi|fqnovel)\.com url reject-200
-^https?:\/\/i-lq\.snssdk\.com url reject-200
-*/
-
 [filter_local]
-PROCESS-NAME,com.dragon.read,番茄小说广告屏蔽
+PROCESS-NAME,com.dragon.read,番茄小说广告
 
-# ✅ 白名单域名（重要接口允许通过）
-DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
-DOMAIN,tp-pay.snssdk.com,DIRECT
-DOMAIN,lf-cdn-tos.byescm.com,DIRECT
+# ✅ 删除或注释关键词误杀
+# DOMAIN-KEYWORD,ad,REJECT
+# DOMAIN-KEYWORD,sdk,REJECT
+# DOMAIN-KEYWORD,video,REJECT
+# DOMAIN-KEYWORD,img,REJECT
+# DOMAIN-KEYWORD,live,REJECT
 
-# 🔥 关键词拦截（保留核心，避免过度）
-//DOMAIN-KEYWORD,ad,REJECT
-//DOMAIN-KEYWORD,sdk,REJECT
-DOMAIN-KEYWORD,video,REJECT
-DOMAIN-KEYWORD,img,REJECT
-DOMAIN-KEYWORD,live,REJECT
-
-# 📛 广告域名拦截
-DOMAIN-KEYWORD,zijieapi,REJECT
+# 准确拦截已知广告域名
 DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
 DOMAIN-KEYWORD,dig.bdurl.net,REJECT
 DOMAIN-KEYWORD,is.snssdk.com,REJECT
@@ -79,7 +70,6 @@ DOMAIN,i-lq.snssdk.com,REJECT
 DOMAIN,v6-novelapp.ixigua.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
-DOMAIN,byteimg.com,REJECT
 DOMAIN,bdurl.net,REJECT
 DOMAIN,fqnovel.com,REJECT
 DOMAIN,fqnovelpic.com,REJECT
@@ -92,6 +82,11 @@ DOMAIN,volccdn.com,REJECT
 DOMAIN,bytetos.com,REJECT
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
+
+# ✅ 白名单确保小说正常加载
+DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
+DOMAIN,tp-pay.snssdk.com,DIRECT
+DOMAIN,lf-cdn-tos.bytescm.com,DIRECT
 
 [MITM]
 hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
