@@ -1,1 +1,203 @@
-/*脚本功能：番茄去广告下载地址：appstore软件版本：所有脚本作者：ALLG999飞机频道：https://t.me/allg999更新时间：2025-05-16测试版本：5.6.5/6.2.1降级id：854680019/865224914最新版6.5.9测试部分有效（文中【看视频免30分钟广告】点击广告无法去除「待解决，我有空再研究一下」））更新日志：5.17 禁用抖音直播广告，会出现广告界面，不会播放广告（缺点：抖音看不了直播）             目前发现问题：京东广告，微信小游戏广告还未完成        5.18使用声明：⚠️连接圈X再打开番茄！广告太他妈的多了.         ⚠️开启本脚本可能导致抖音直播无法正常使用！！！                  配合食用更香哦！https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list*/#!name=番茄小说#!desc=番茄小说去广告[rewrite_local]# 本地svip显示（并没有这能力做出来，哈哈哈）//^https?:\/\/.*\/(user\/vip_info|vip\/user_info).*$ script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js//^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js//⬇️如果抖音直播频繁刷出，可以考虑开启这一条，毁天灭地。//^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200^https?:\/\/.*\.ecombdimg\.com\/.*ad.* url reject-200^https?:\/\/.*\.bdurl\.net\/.*ad.* url reject-200^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200^https?:\/\/(.*pangolin-sdk-toutiao.*)\.com\/.* url reject-200^https?:\/\/.*\.oceanengine.com url reject-200^https?:\/\/.*\.zijieapi.com url reject-200^https?:\/\/.*\.fqnovelpic.com url reject-200^https?:\/\/.*\.ecombdimg.com url reject-200^https?:\/\/.*\.snssdk.com url reject-200^https?:\/\/mcs.snssdk.com url reject-200^https?:\/\/.*\.fqnovel.com url reject-200^https?:\/\/.*\.fqnovelpic.com url reject-200^https?:\/\/.*\.bytescm.com url reject-200^https?:\/\/.*\.byteimg.com url reject-200^https?:\/\/.*\.safebrowsing.apple url reject-200^https?:\/\/.*\.amemv.com url reject-200^https?:\/\/.*\.bytegecko.com url reject-200^https?:\/\/.*\.bdurl.net url reject-200^https?:\/\/.*\.ecombdapi.com url reject-200^https?:\/\/.*\.ecombdimg.com url reject-200^https?:\/\/.*\.pangolin-sdk-toutiao-a.com url reject-200^https?:\/\/.*\.pangolin-sdk-toutiao-b.com url reject-200^https?:\/\/.*\.pangolin-sdk-toutiao-c.com url reject-200^https?:\/\/.*\.bytegecko.com url reject-200^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200^https?:\/\/.*\.zijieapi\.com\/.*api.* url reject-200^https?:\/\/.*\.zijieapi\.com\/.*sdk.* url reject-200^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*api.* url reject-200^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*sdk.* url reject-200^https?:\/\/.*\.wcp.taobao.com\/.*adstrack.* url reject-200^https?:\/\/.*\.*pangolin-sdk-toutiao1.*\.com*\/.* url reject-200^https?:\/\/.*\.*toutiao.*\.com\/.*\.png$ url reject-200 ^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpg$ url reject-200 ^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpeg$ url reject-200 ^https?:\/\/.+\.*webcast.*\.douyin.com url reject-200 ^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js^https?:\/\/.*\.pangolin-sdk-toutiao.com url reject-200 //^https?:\/\/.*\.pangolin-sdk-toutiao.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track-log\/src\/.+ - reject^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject^http:\/\/.+\.byteimg\.com\/ad-app-package - reject^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject^https?:\/\/normal\.zijieapi\.com - reject^https?:\/\/lq\.fqnovel\.com - reject ^https?:\/\/normal\.fqnovel\.com - reject ^https?:\/\/api\.pangolin-sdk-toutiao\.com - reject ^https?:\/\/api\.pangolin-sdk-toutiao1\.com - reject ^https?:\/\/lq\.snssdk\.com - reject ^https?:\/\/i-lq\.snssdk\.com - reject ^https?:\/\/api\.fqnovel\.com - reject [filter_local]PROCESS-NAME,com.dragon.read,番茄小说广告DOMAIN,p6-ad-sign.byteimg.com,REJECTDOMAIN,p9-ad-sign.byteimg.com,REJECTDOMAIN,ads0-normal-lq.zijieapi.com,REJECTDOMAIN,ads1-normal-lq.zijieapi.com,REJECTDOMAIN,ads2-normal-lq.zijieapi.com,REJECTDOMAIN,ads3-normal-lq.zijieapi.com,REJECTDOMAIN,ads4-normal-lq.zijieapi.com,REJECTDOMAIN,ads5-normal-lq.zijieapi.com,REJECTDOMAIN,api0-normal-sinfonlinea.fqbovel.com,REJECTDOMAIN,api1-normal-sinfonlinea.fqbovel.com,REJECTDOMAIN,api2-normal-sinfonlinea.fqbovel.com,REJECTDOMAIN,api3-normal-sinfonlinea.fqbovel.com,REJECTDOMAIN,api4-normal-sinfonlinea.fqbovel.com,REJECTDOMAIN,api5-normal-sinfonlinea.fqbovel.com,REJECTDOMAIN,api-access.pangolin-sdk-toutiao.com,REJECTDOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECTDOMAIN,i-lq-snssdk.com,REJECTDOMAIN-SUFFIX,byteimg.com,DIRECTDOMAIN,i.snssdk.com,REJECTDOMAIN,i-lq.snssdk.com,REJECTDOMAIN,dig.bdurl.net,REJECTDOMAIN-KEYWORD,zijieapi,REJECTDOMAIN,activity-ag.awemeughun.com,REJECTDOMAIN,mcs.snssdk.com,REJECTDOMAIN,tnc3-alisc1.snssdk.com,REJECTDOMAIN,security-lq.snssdk.com,REJECTDOMAIN,tnc3-aliec2.snssdk.com,REJECTDOMAIN,tnc3-aliec3.snssdk.com,REJECTDOMAIN,tnc0-aliec1.snssdk.com,REJECTDOMAIN,tnc0-aliec2.snssdk.com,REJECTDOMAIN,tnc0-aliec3.snssdk.com,REJECTDOMAIN,tnc1-aliec1.snssdk.com,REJECTDOMAIN,tnc1-aliec2.snssdk.com,REJECTDOMAIN,tnc1-aliec3.snssdk.com,REJECTDOMAIN,tnc2-aliec1.snssdk.com,REJECTDOMAIN,tnc2-aliec2.snssdk.com,REJECTDOMAIN,tnc2-aliec3.snssdk.com,REJECTDOMAIN,tnc0-aliec1.zijieapi.com,REJECTDOMAIN,tnc0-aliec2.zijieapi.com,REJECTDOMAIN,tnc0-aliec3.zijieapi.com,REJECTDOMAIN,tnc1-aliec1.zijieapi.com,REJECTDOMAIN,tnc1-aliec2.zijieapi.com,REJECTDOMAIN,tnc1-aliec3.zijieapi.com,REJECTDOMAIN,tnc2-aliec1.zijieapi.com,REJECTDOMAIN,tnc2-aliec2.zijieapi.com,REJECTDOMAIN,tnc2-aliec3.zijieapi.com,REJECTDOMAIN,tnc3-aliec1.zijieapi.com,REJECTDOMAIN,tnc3-aliec2.zijieapi.com,REJECTDOMAIN,tnc3-aliec3.zijieapi.com,REJECTDOMAIN,is.snssdk.com,REJECTDOMAIN,i.snssdk.com,REJECTDOMAIN,v6-novelapp.ixigua.com,REJECTDOMAIN,*novelapp.ixigua.com,REJECTDOMAIN,*default.ixigua.com,REJECTDOMAIN,msync-im1-vip6-std.easemob.com,REJECTDOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECTDOMAIN,api.iegadp.qq.com,REJECTDOMAIN,sf3-ttcdn-tos.pstatp.com,REJECTDOMAIN-SUFFIX,pglstatp-toutiao.com,REJECTDOMAIN-SUFFIX,byteorge.com,REJECTDOMAIN-SUFFIX,bytegoofy.com,REJECTDOMAIN-SUFFIX,bytedance.com,REJECTDOMAIN,360buyimg.com,REJECTDOMAIN,buysecm.com,REJECTDOMAIN,snssdk.com,REJECTDOMAIN,fqnovel.com,REJECTDOMAIN,fqnovelpic.com,REJECTDOMAIN,byteimg.com,REJECTDOMAIN,bdurl.net,REJECTDOMAIN,ecombdapi.com,REJECTIP-CIDR,49.71.37.101/32,REJECT,no-resolveIP-CIDR,117.71.105.23/32,REJECT,no-resolveIP-CIDR,218.94.207.205/32,REJECT,no-resolveIP-CIDR,117.92.229.188/32,REJECT,no-resolveIP-CIDR,101.36.166.16/32,REJECT,no-resolveIP-CIDR,180.96.2.114/32,REJECT,no-resolveDOMAIN-KEYWORD,dig.zjurl.cnDOMAIN-KEYWORD,dig.bdurl.netAND,((DOMAIN-KEYWORD,zijieapi),(DOMAIN-KEYWORD,ad))DOMAIN-KEYWORD,is.snssdk.com[MITM]hostname = %APPEND% .pangolin-sdk-toutiao,*.ecombdimg.com,*.douyin.com,*.ihunantv.com,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com,wcp.taobao.com
+
+/*
+脚本功能：番茄去广告
+下载地址：appstore
+软件版本：所有
+脚本作者：ALLG999
+飞机频道：https://t.me/allg999
+更新时间：2025-05-16
+测试版本：5.6.5/6.2.1
+降级id：854680019/865224914
+最新版6.5.9测试部分有效（文中【看视频免30分钟广告】点击广告无法去除「待解决，我有空再研究一下」））
+更新日志：5.17 禁用抖音直播广告，会出现广告界面，不会播放广告（缺点：抖音看不了直播）
+             目前发现问题：京东广告，微信小游戏广告还未完成
+        5.18
+使用声明：⚠️连接圈X再打开番茄！广告太他妈的多了.
+         ⚠️开启本脚本可能导致抖音直播无法正常使用！！！
+         
+         配合食用更香哦！https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list
+*/
+#!name=番茄小说
+#!desc=番茄小说去广告
+[rewrite_local]
+# 本地svip显示（并没有这能力做出来，哈哈哈）
+//^https?:\/\/.*\/(user\/vip_info|vip\/user_info).*$ script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
+//^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
+
+^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
+//⬇️如果抖音直播频繁刷出，可以考虑开启这一条，毁天灭地。
+//^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
+^https?:\/\/.*\.ecombdimg\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.bdurl\.net\/.*ad.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
+
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
+^https?:\/\/(.*pangolin-sdk-toutiao.*)\.com\/.* url reject-200
+^https?:\/\/.*\.oceanengine.com url reject-200
+^https?:\/\/.*\.zijieapi.com url reject-200
+^https?:\/\/.*\.fqnovelpic.com url reject-200
+^https?:\/\/.*\.ecombdimg.com url reject-200
+^https?:\/\/.*\.snssdk.com url reject-200
+^https?:\/\/mcs.snssdk.com url reject-200
+^https?:\/\/.*\.fqnovel.com url reject-200
+^https?:\/\/.*\.fqnovelpic.com url reject-200
+^https?:\/\/.*\.bytescm.com url reject-200
+^https?:\/\/.*\.byteimg.com url reject-200
+^https?:\/\/.*\.safebrowsing.apple url reject-200
+^https?:\/\/.*\.amemv.com url reject-200
+^https?:\/\/.*\.bytegecko.com url reject-200
+^https?:\/\/.*\.bdurl.net url reject-200
+^https?:\/\/.*\.ecombdapi.com url reject-200
+^https?:\/\/.*\.ecombdimg.com url reject-200
+
+^https?:\/\/.*\.pangolin-sdk-toutiao-a.com url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao-b.com url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao-c.com url reject-200
+^https?:\/\/.*\.bytegecko.com url reject-200
+
+
+^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.zijieapi\.com\/.*api.* url reject-200
+^https?:\/\/.*\.zijieapi\.com\/.*sdk.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*api.* url reject-200
+^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*sdk.* url reject-200
+^https?:\/\/.*\.wcp.taobao.com\/.*adstrack.* url reject-200
+
+^https?:\/\/.*\.*pangolin-sdk-toutiao1.*\.com*\/.* url reject-200
+^https?:\/\/.*\.*toutiao.*\.com\/.*\.png$ url reject-200 
+^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpg$ url reject-200 
+^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpeg$ url reject-200 
+^https?:\/\/.+\.*webcast.*\.douyin.com url reject-200 
+^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
+^https?:\/\/.*\.pangolin-sdk-toutiao.com url reject-200 
+//^https?:\/\/.*\.pangolin-sdk-toutiao.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
+
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
+^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject
+^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject
+^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
+^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track-log\/src\/.+ - reject
+^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
+^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
+^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
+^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
+^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
+^https?:\/\/normal\.zijieapi\.com - reject
+^https?:\/\/lq\.fqnovel\.com - reject 
+^https?:\/\/normal\.fqnovel\.com - reject 
+^https?:\/\/api\.pangolin-sdk-toutiao\.com - reject 
+^https?:\/\/api\.pangolin-sdk-toutiao1\.com - reject 
+^https?:\/\/lq\.snssdk\.com - reject 
+^https?:\/\/i-lq\.snssdk\.com - reject 
+^https?:\/\/api\.fqnovel\.com - reject 
+[filter_local]
+PROCESS-NAME,com.dragon.read,番茄小说广告
+
+
+DOMAIN,p6-ad-sign.byteimg.com,REJECT
+DOMAIN,p9-ad-sign.byteimg.com,REJECT
+
+
+DOMAIN,ads0-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads1-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads2-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads3-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads4-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads5-normal-lq.zijieapi.com,REJECT
+DOMAIN,api0-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api1-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api2-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api3-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api4-normal-sinfonlinea.fqbovel.com,REJECT
+DOMAIN,api5-normal-sinfonlinea.fqbovel.com,REJECT
+
+
+
+
+DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
+
+
+DOMAIN,i-lq-snssdk.com,REJECT
+DOMAIN-SUFFIX,byteimg.com,DIRECT
+DOMAIN,i.snssdk.com,REJECT
+DOMAIN,i-lq.snssdk.com,REJECT
+DOMAIN,dig.bdurl.net,REJECT
+DOMAIN-KEYWORD,zijieapi,REJECT
+DOMAIN,activity-ag.awemeughun.com,REJECT
+DOMAIN,mcs.snssdk.com,REJECT
+DOMAIN,tnc3-alisc1.snssdk.com,REJECT
+DOMAIN,security-lq.snssdk.com,REJECT
+DOMAIN,tnc3-aliec2.snssdk.com,REJECT
+DOMAIN,tnc3-aliec3.snssdk.com,REJECT
+DOMAIN,tnc0-aliec1.snssdk.com,REJECT
+DOMAIN,tnc0-aliec2.snssdk.com,REJECT
+DOMAIN,tnc0-aliec3.snssdk.com,REJECT
+DOMAIN,tnc1-aliec1.snssdk.com,REJECT
+DOMAIN,tnc1-aliec2.snssdk.com,REJECT
+DOMAIN,tnc1-aliec3.snssdk.com,REJECT
+DOMAIN,tnc2-aliec1.snssdk.com,REJECT
+DOMAIN,tnc2-aliec2.snssdk.com,REJECT
+DOMAIN,tnc2-aliec3.snssdk.com,REJECT
+DOMAIN,tnc0-aliec1.zijieapi.com,REJECT
+DOMAIN,tnc0-aliec2.zijieapi.com,REJECT
+DOMAIN,tnc0-aliec3.zijieapi.com,REJECT
+DOMAIN,tnc1-aliec1.zijieapi.com,REJECT
+DOMAIN,tnc1-aliec2.zijieapi.com,REJECT
+DOMAIN,tnc1-aliec3.zijieapi.com,REJECT
+DOMAIN,tnc2-aliec1.zijieapi.com,REJECT
+DOMAIN,tnc2-aliec2.zijieapi.com,REJECT
+DOMAIN,tnc2-aliec3.zijieapi.com,REJECT
+DOMAIN,tnc3-aliec1.zijieapi.com,REJECT
+DOMAIN,tnc3-aliec2.zijieapi.com,REJECT
+DOMAIN,tnc3-aliec3.zijieapi.com,REJECT
+DOMAIN,is.snssdk.com,REJECT
+DOMAIN,i.snssdk.com,REJECT
+DOMAIN,v6-novelapp.ixigua.com,REJECT
+DOMAIN,*novelapp.ixigua.com,REJECT
+DOMAIN,*default.ixigua.com,REJECT
+DOMAIN,msync-im1-vip6-std.easemob.com,REJECT
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
+DOMAIN,api.iegadp.qq.com,REJECT
+DOMAIN,sf3-ttcdn-tos.pstatp.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+
+DOMAIN-SUFFIX,byteorge.com,REJECT
+DOMAIN-SUFFIX,bytegoofy.com,REJECT
+DOMAIN-SUFFIX,bytedance.com,REJECT
+
+
+DOMAIN,360buyimg.com,REJECT
+DOMAIN,buysecm.com,REJECT
+DOMAIN,snssdk.com,REJECT
+DOMAIN,fqnovel.com,REJECT
+DOMAIN,fqnovelpic.com,REJECT
+DOMAIN,byteimg.com,REJECT
+DOMAIN,bdurl.net,REJECT
+DOMAIN,ecombdapi.com,REJECT
+
+
+IP-CIDR,49.71.37.101/32,REJECT,no-resolve
+IP-CIDR,117.71.105.23/32,REJECT,no-resolve
+IP-CIDR,218.94.207.205/32,REJECT,no-resolve
+IP-CIDR,117.92.229.188/32,REJECT,no-resolve
+IP-CIDR,101.36.166.16/32,REJECT,no-resolve
+IP-CIDR,180.96.2.114/32,REJECT,no-resolve
+DOMAIN-KEYWORD,dig.zjurl.cn
+DOMAIN-KEYWORD,dig.bdurl.net
+AND,((DOMAIN-KEYWORD,zijieapi),(DOMAIN-KEYWORD,ad))
+DOMAIN-KEYWORD,is.snssdk.com
+
+
+
+
+
+
+
+[MITM]
+hostname = %APPEND% .pangolin-sdk-toutiao,*.ecombdimg.com,*.douyin.com,*.ihunantv.com,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com,wcp.taobao.com
