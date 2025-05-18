@@ -50,28 +50,16 @@
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
 
-# 小说正常接口白名单
-DOMAIN,ecombdapi.com,DIRECT
-# 保留拦截 api5-normal-sinfonlinea.fqnovel.com
+# 放行小说接口域名
+DOMAIN,tn3-alisc1-zijieapi.com,DIRECT
+
+# 拦截疑似广告接口
 DOMAIN,api5-normal-sinfonlinea.fqnovel.com,REJECT
 
-# 放行其他全部域名，先确认是否是域名拦截导致加载失败
-# 可以用泛域名放行，比如：
-DOMAIN-KEYWORD,fqnovel,DIRECT
-
-# 关键词拦截（广告域名关键词）
-DOMAIN-KEYWORD,ad,REJECT
-DOMAIN-KEYWORD,live,REJECT
-DOMAIN-KEYWORD,img,REJECT
-DOMAIN-KEYWORD,video,REJECT
-DOMAIN-KEYWORD,sdk,REJECT
-DOMAIN-KEYWORD,api,REJECT
-
-# 其他广告相关域名拦截
-DOMAIN-KEYWORD,zijieapi,REJECT
+# 拦截已知广告域名
 DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
 DOMAIN-KEYWORD,dig.bdurl.net,REJECT
-DOMAIN,is.snssdk.com,REJECT
+DOMAIN-KEYWORD,is.snssdk.com,REJECT
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
 DOMAIN,mcs.snssdk.com,REJECT
@@ -84,6 +72,7 @@ DOMAIN,byteimg.com,REJECT
 DOMAIN,bdurl.net,REJECT
 DOMAIN,fqnovel.com,REJECT
 DOMAIN,fqnovelpic.com,REJECT
+DOMAIN,ecombdapi.com,REJECT
 DOMAIN,ecombdimg.com,REJECT
 DOMAIN,bytegoofy.com,REJECT
 DOMAIN,bytegecko.com,REJECT
@@ -92,6 +81,21 @@ DOMAIN,volccdn.com,REJECT
 DOMAIN,bytetos.com,REJECT
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
+
+# 精准拦截与放行 - 避免误杀含 zijieapi 的小说接口
+DOMAIN,tn3-alisc1-zijieapi.com,DIRECT
+# 拦截其他可能广告子域
+DOMAIN,ad.zijieapi.com,REJECT
+DOMAIN,ads.zijieapi.com,REJECT
+DOMAIN,banner.zijieapi.com,REJECT
+
+# 关键词拦截（去掉“zijieapi”避免误杀）
+DOMAIN-KEYWORD,api,REJECT
+DOMAIN-KEYWORD,sdk,REJECT
+DOMAIN-KEYWORD,ad,REJECT
+DOMAIN-KEYWORD,video,REJECT
+DOMAIN-KEYWORD,img,REJECT
+DOMAIN-KEYWORD,live,REJECT
 
 [MITM]
 hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
