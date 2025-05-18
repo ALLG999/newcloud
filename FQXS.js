@@ -52,7 +52,13 @@
 ^https?:\/\/.*\.pangolin-sdk-toutiao-a.com url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao-b.com url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao-c.com url reject-200
+//火山
 ^https?:\/\/.*\.bytegecko.com url reject-200
+^https?:\/\/.*\.volcanicengine.com url reject-200
+^https?:\/\/.*\.bytetos.com url reject-200
+^https?:\/\/.*\.volccdn.com url reject-200
+^https?:\/\/.*\.bytegoofy.com url reject-200
+^https?:\/\/.*\.volcengine.com url reject-200
 
 
 ^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
