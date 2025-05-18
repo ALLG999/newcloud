@@ -25,61 +25,124 @@
 ^https?:\/\/.*\/(user\/vip_info|vip\/user_info).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
 ^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
 ^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
-
+^https?:\/\/.*\/(ad|advertisement|commercial|feed|launch|start)\/?.* url reject-200
 # 可选：抖音直播彻底拦截（副作用：直播功能无法使用）
 # ^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
 
-# 常规广告拦截（部分基于域名关键字 ad）
-^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|byteimg|oceanengine|fqnovelpic|fqnovel|bytescm|bytetos|volccdn|volcengine|bytegecko|bytegoofy)\.com\/.*ad.* url reject-200
-^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|fqnovel|byteimg)\.com\/.* url reject-200
-^https?:\/\/mcs\.snssdk\.com url reject-200
-^https?:\/\/normal\.(zijieapi|fqnovel)\.com url reject-200
-^https?:\/\/lq\.(fqnovel|snssdk)\.com url reject-200
-^https?:\/\/i-lq\.snssdk\.com url reject-200
+# 典型抖音及头条API拦截示例
+^https?:\/\/.*pangolin-sdk-toutiao.*\/.* url reject-200
+^https?:\/\/.*bytegecko.com.* url reject-200
+^https?:\/\/.*volcanicengine.com.* url reject-200
+^https?:\/\/.*zijieapi.com.* url reject-200
+^https?:\/\/.*fqnovel.* url reject-200
+^https?:\/\/.*byteimg.com.* url reject-200
+^https?:\/\/.*snssdk.com.* url reject-200
 
-# 抖音 Webcast 直播广告流（MP4）
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad|web\.business\.image|ad-app-package)\/.+ - reject
-^https?:\/\/.+\.byteimg.com\/tos-cn-i-1yzifmftcy\/.+\.jpeg - reject
-^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from=ad - reject
-^https?:\/\/.+\.snssdk\.com\/api\/ad\/.+ - reject
+[filter_remote]
+# 通过关键词精准拦截广告请求
+DOMAIN-KEYWORD,api,REJECT
+DOMAIN-KEYWORD,sdk,REJECT
+DOMAIN-KEYWORD,ad,REJECT
+DOMAIN-KEYWORD,video,REJECT
+DOMAIN-KEYWORD,img,REJECT
+DOMAIN-KEYWORD,live,REJECT
 
-# 抖音请求头劫持脚本
-^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
-
-[filter_local]
-PROCESS-NAME,com.dragon.read,番茄小说广告
-
-DOMAIN-KEYWORD,zijieapi,REJECT
-DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
-DOMAIN-KEYWORD,dig.bdurl.net,REJECT
-DOMAIN-KEYWORD,is.snssdk.com,REJECT
+# 以下域名通常涉及广告和追踪，阻断它们
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
-DOMAIN,mcs.snssdk.com,REJECT
-DOMAIN,i.snssdk.com,REJECT
-DOMAIN,i-lq.snssdk.com,REJECT
-DOMAIN,v6-novelapp.ixigua.com,REJECT
+DOMAIN,ads0-normal-lq.zijieapi.com,REJECT
+DOMAIN,ads1-normal-lq.zijieapi.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
-DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
-DOMAIN,byteimg.com,REJECT
-DOMAIN,bdurl.net,REJECT
-DOMAIN,fqnovel.com,REJECT
-DOMAIN,fqnovelpic.com,REJECT
-DOMAIN,ecombdapi.com,REJECT
-DOMAIN,ecombdimg.com,REJECT
-DOMAIN,bytegoofy.com,REJECT
-DOMAIN,bytegecko.com,REJECT
-DOMAIN,volcengine.com,REJECT
-DOMAIN,volccdn.com,REJECT
-DOMAIN,bytetos.com,REJECT
-DOMAIN,360buyimg.com,REJECT
-DOMAIN,api.iegadp.qq.com,REJECT
-# 域名关键字眼拦截，ps：其他软件可能出问题
+DOMAIN,mcs.snssdk.com,REJECT
+DOMAIN,tnc0-aliec1.snssdk.com,REJECT
+DOMAIN,tnc0-aliec1.zijieapi.com,REJECT
+DOMAIN,normal.zijieapi.com,REJECT
+
+# 其他已知广告域名
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,byteorge.com,REJECT
+DOMAIN-SUFFIX,bytegoofy.com,REJECT
+DOMAIN-SUFFIX,bytedance.com,REJECT
+DOMAIN-SUFFIX,snssdk.com,REJECT
+DOMAIN-SUFFIX,fqnovel.com,REJECT
+DOMAIN-SUFFIX,fqnovelpic.com,REJECT
+DOMAIN-SUFFIX,byteimg.com,REJECT
+DOMAIN-SUFFIX,bdurl.net,REJECT
+DOMAIN-SUFFIX,ecombdapi.com,REJECT
+
+[mitm]
+hostname = 
+  *.pangolin-sdk-toutiao.com,
+  *.ecombdimg.com,
+  *.douyin.com,
+  *.snssdk.com,
+  *.zijieapi.com,
+  *.byteimg.com,
+  *.fqnovel.com,
+  *.fqnovelpic.com,
+  *.bytedance.com,
+  *.pstatp.com,
+  *.pglstatp-toutiao.com,
+  *.volcanicengine.com,
+  *.volccdn.com,
+  *.bytegecko.com,
+  *.bytegoofy.com,
+  bdurl.net,
+  ecombdapi.com
+
+
+  
+//# 常规广告拦截（部分基于域名关键字 ad）
+//^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|byteimg|oceanengine|fqnovelpic|fqnovel|bytescm|bytetos|volccdn|volcengine|bytegecko|bytegoofy)\.com\/.*ad.* url reject-200
+//^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|fqnovel|byteimg)\.com\/.* url reject-200
+//^https?:\/\/mcs\.snssdk\.com url reject-200
+//^https?:\/\/normal\.(zijieapi|fqnovel)\.com url reject-200
+//^https?:\/\/lq\.(fqnovel|snssdk)\.com url reject-200
+//^https?:\/\/i-lq\.snssdk\.com url reject-200
+
+//# 抖音 Webcast 直播广告流（MP4）
+//^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad|web\.business\.image|ad-app-package)\/.+ - reject
+//^https?:\/\/.+\.byteimg.com\/tos-cn-i-1yzifmftcy\/.+\.jpeg - reject
+//^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from=ad - reject
+//^https?:\/\/.+\.snssdk\.com\/api\/ad\/.+ - reject
+
+//# 抖音请求头劫持脚本
+//^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
+
+//[filter_local]
+//PROCESS-NAME,com.dragon.read,番茄小说广告
+
+//DOMAIN-KEYWORD,zijieapi,REJECT
+//DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
+//DOMAIN-KEYWORD,dig.bdurl.net,REJECT
+//DOMAIN-KEYWORD,is.snssdk.com,REJECT
+//DOMAIN,p6-ad-sign.byteimg.com,REJECT
+//DOMAIN,p9-ad-sign.byteimg.com,REJECT
+//DOMAIN,mcs.snssdk.com,REJECT
+//DOMAIN,i.snssdk.com,REJECT
+//DOMAIN,i-lq.snssdk.com,REJECT
+//DOMAIN,v6-novelapp.ixigua.com,REJECT
+//DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+//DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
+//DOMAIN,byteimg.com,REJECT
+//DOMAIN,bdurl.net,REJECT
+//DOMAIN,fqnovel.com,REJECT
+//DOMAIN,fqnovelpic.com,REJECT
+//DOMAIN,ecombdapi.com,REJECT
+//DOMAIN,ecombdimg.com,REJECT
+//DOMAIN,bytegoofy.com,REJECT
+//DOMAIN,bytegecko.com,REJECT
+//DOMAIN,volcengine.com,REJECT
+//DOMAIN,volccdn.com,REJECT
+//DOMAIN,bytetos.com,REJECT
+//DOMAIN,360buyimg.com,REJECT
+//DOMAIN,api.iegadp.qq.com,REJECT
+//# 域名关键字眼拦截，ps：其他软件可能出问题
 //DOMAIN-KEYWORD,api,REJECT
 //DOMAIN-KEYWORD,sdk,REJECT
 //DOMAIN-KEYWORD,ad,REJECT
 //DOMAIN-KEYWORD,video,REJECT
 //DOMAIN-KEYWORD,img,REJECT
 //DOMAIN-KEYWORD,live,REJECT
-[MITM]
-hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
+//[MITM]
+//hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
