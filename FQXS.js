@@ -50,10 +50,13 @@
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
 
-# 白名单 - 一定要放最前面，避免被后面的关键词拦截误杀
-DOMAIN,api5-normal-sinfonlinea.fqnovel.com,DIRECT
+[filter_local]
+PROCESS-NAME,com.dragon.read,番茄小说广告
 
-# 关键词拦截（针对广告相关关键词）
+# 小说正常接口白名单
+DOMAIN,ecombdapi.com,DIRECT
+
+# 关键词拦截（广告域名关键词）
 DOMAIN-KEYWORD,ad,REJECT
 DOMAIN-KEYWORD,live,REJECT
 DOMAIN-KEYWORD,img,REJECT
@@ -61,7 +64,7 @@ DOMAIN-KEYWORD,video,REJECT
 DOMAIN-KEYWORD,sdk,REJECT
 DOMAIN-KEYWORD,api,REJECT
 
-# 其他单独域名拦截（广告相关）
+# 其他广告相关域名拦截
 DOMAIN-KEYWORD,zijieapi,REJECT
 DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
 DOMAIN-KEYWORD,dig.bdurl.net,REJECT
@@ -78,7 +81,6 @@ DOMAIN,byteimg.com,REJECT
 DOMAIN,bdurl.net,REJECT
 DOMAIN,fqnovel.com,REJECT
 DOMAIN,fqnovelpic.com,REJECT
-DOMAIN,ecombdapi.com,REJECT
 DOMAIN,ecombdimg.com,REJECT
 DOMAIN,bytegoofy.com,REJECT
 DOMAIN,bytegecko.com,REJECT
