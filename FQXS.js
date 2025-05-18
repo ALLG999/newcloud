@@ -97,12 +97,8 @@
 ^https?:\/\/api\.fqnovel\.com - reject 
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
-
-
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
-
-
 DOMAIN,ads0-normal-lq.zijieapi.com,REJECT
 DOMAIN,ads1-normal-lq.zijieapi.com,REJECT
 DOMAIN,ads2-normal-lq.zijieapi.com,REJECT
@@ -115,14 +111,8 @@ DOMAIN,api2-normal-sinfonlinea.fqbovel.com,REJECT
 DOMAIN,api3-normal-sinfonlinea.fqbovel.com,REJECT
 DOMAIN,api4-normal-sinfonlinea.fqbovel.com,REJECT
 DOMAIN,api5-normal-sinfonlinea.fqbovel.com,REJECT
-
-
-
-
 DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
-
-
 DOMAIN,i-lq-snssdk.com,REJECT
 DOMAIN-SUFFIX,byteimg.com,DIRECT
 DOMAIN,i.snssdk.com,REJECT
@@ -166,12 +156,9 @@ DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
 DOMAIN,sf3-ttcdn-tos.pstatp.com,REJECT
 DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
-
 DOMAIN-SUFFIX,byteorge.com,REJECT
 DOMAIN-SUFFIX,bytegoofy.com,REJECT
 DOMAIN-SUFFIX,bytedance.com,REJECT
-
-
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,buysecm.com,REJECT
 DOMAIN,snssdk.com,REJECT
@@ -180,8 +167,6 @@ DOMAIN,fqnovelpic.com,REJECT
 DOMAIN,byteimg.com,REJECT
 DOMAIN,bdurl.net,REJECT
 DOMAIN,ecombdapi.com,REJECT
-
-
 IP-CIDR,49.71.37.101/32,REJECT,no-resolve
 IP-CIDR,117.71.105.23/32,REJECT,no-resolve
 IP-CIDR,218.94.207.205/32,REJECT,no-resolve
@@ -192,12 +177,11 @@ DOMAIN-KEYWORD,dig.zjurl.cn
 DOMAIN-KEYWORD,dig.bdurl.net
 AND,((DOMAIN-KEYWORD,zijieapi),(DOMAIN-KEYWORD,ad))
 DOMAIN-KEYWORD,is.snssdk.com
-
-
-
-
-
-
-
+# 关键词拦截
+DOMAIN-KEYWORD,api,REJECT
+DOMAIN-KEYWORD,sdk,REJECT
+DOMAIN-KEYWORD,ad,REJECT
+DOMAIN-KEYWORD,video,REJECT
+DOMAIN-KEYWORD,img,REJECT
 [MITM]
 hostname = %APPEND% .pangolin-sdk-toutiao,*.ecombdimg.com,*.douyin.com,*.ihunantv.com,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com,.snssdk.com,*default.ixigua.com,.360buyimg.com,.zijieapi.com,.buysecm.com,wcp.taobao.com
