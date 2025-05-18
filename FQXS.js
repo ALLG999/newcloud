@@ -11,7 +11,7 @@
 最新版6.5.9测试部分有效（文中【看视频免30分钟广告】点击广告无法去除「待解决，我有空再研究一下」））
 更新日志：5.17 禁用抖音直播广告，会出现广告界面，不会播放广告（缺点：抖音看不了直播）
              目前发现问题：京东广告，微信小游戏广告还未完成
-        5.18
+        5.18 累了。。。
 使用声明：⚠️连接圈X再打开番茄！广告太他妈的多了.
          ⚠️开启本脚本可能导致抖音直播无法正常使用！！！
          
@@ -26,7 +26,7 @@
 
 ^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
 //⬇️如果抖音直播频繁刷出，可以考虑开启这一条，毁天灭地。
-//^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
+^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
 ^https?:\/\/.*\.ecombdimg\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.bdurl\.net\/.*ad.* url reject-200
 ^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
