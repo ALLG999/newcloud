@@ -50,14 +50,15 @@
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
 
-# 放行小说关键接口（避免误杀）
-DOMAIN,tn3-alisc1-zijieapi.com,DIRECT
-DOMAIN,tp-pay.snssdk.com,DIRECT
-DOMAIN,lf-cdn-tos.byescm.com,DIRECT
+# 拦截关键词相关的域名
+DOMAIN-KEYWORD,api,REJECT
+DOMAIN-KEYWORD,sdk,REJECT
+DOMAIN-KEYWORD,ad,REJECT
+DOMAIN-KEYWORD,video,REJECT
+DOMAIN-KEYWORD,img,REJECT
+DOMAIN-KEYWORD,live,REJECT
 
-# 拦截疑似广告接口
-DOMAIN,api5-normal-sinfonlinea.fqnovel.com,REJECT
-
+# 已知拦截域名
 DOMAIN-KEYWORD,zijieapi,REJECT
 DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
 DOMAIN-KEYWORD,dig.bdurl.net,REJECT
@@ -85,13 +86,10 @@ DOMAIN,bytetos.com,REJECT
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
 
-# 关键词拦截（拦截含 api、sdk、ad、video、img、live 的域名）
-DOMAIN-KEYWORD,api,REJECT
-DOMAIN-KEYWORD,sdk,REJECT
-DOMAIN-KEYWORD,ad,REJECT
-DOMAIN-KEYWORD,video,REJECT
-DOMAIN-KEYWORD,img,REJECT
-DOMAIN-KEYWORD,live,REJECT
+# 白名单，确保小说正常加载
+DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
+DOMAIN,tp-pay.snssdk.com,DIRECT
+DOMAIN,lf-cdn-tos.byescm.com,DIRECT
 
 [MITM]
 hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
