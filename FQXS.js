@@ -92,7 +92,7 @@ https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list,
 [filter_local]
 
 # 📱 进程名过滤（确保模块识别）
-PROCESS-NAME,com.dragon.read,番茄小说广告
+PROCESS-NAME,com.dragon.read,番茄小说
 
 # 📍 精准域名拦截
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
