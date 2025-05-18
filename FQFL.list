@@ -1,0 +1,6 @@
+[filter_remote]
+https://raw.githubusercontent.com/ALLG999/xxx/xxx.list, tag=番茄小说广告过滤, force-policy=REJECT
+
+[filter_local]
+DOMAIN-KEYWORD,ad,REJECT
+DOMAIN-KEYWORD,ad,REJECT,PROXY-NAME=com.dragon.read
