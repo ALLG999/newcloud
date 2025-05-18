@@ -52,7 +52,12 @@ PROCESS-NAME,com.dragon.read,番茄小说广告
 
 # 小说正常接口白名单
 DOMAIN,ecombdapi.com,DIRECT
-DOMAIN,fqnovel.com,DIRECT
+# 保留拦截 api5-normal-sinfonlinea.fqnovel.com
+DOMAIN,api5-normal-sinfonlinea.fqnovel.com,REJECT
+
+# 放行其他全部域名，先确认是否是域名拦截导致加载失败
+# 可以用泛域名放行，比如：
+DOMAIN-KEYWORD,fqnovel,DIRECT
 
 # 关键词拦截（广告域名关键词）
 DOMAIN-KEYWORD,ad,REJECT
@@ -77,7 +82,7 @@ DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
 DOMAIN,byteimg.com,REJECT
 DOMAIN,bdurl.net,REJECT
-//DOMAIN,fqnovel.com,REJECT
+DOMAIN,fqnovel.com,REJECT
 DOMAIN,fqnovelpic.com,REJECT
 DOMAIN,ecombdimg.com,REJECT
 DOMAIN,bytegoofy.com,REJECT
