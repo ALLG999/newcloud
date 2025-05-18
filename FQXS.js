@@ -13,10 +13,16 @@
          2. ⚠️开启此规则可能导致抖音直播不可用；
          3. ⚠️京东购物 & 淘宝购物 & 微信小游戏广告暂未完全处理；
          
-配合食用更香哦！https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list
+配合以下分流食用更香哦！（勾选策略偏好--REJECT）
+         https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list
+         https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list
 */
 #!name=番茄小说
 #!desc=番茄小说去广告
+[filter_remote]
+https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list, tag=番茄分流, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list, tag=番茄去广告, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+         
 [rewrite_local]
 
 # 🍅 本地伪装 VIP（仅界面效果，并没有能力写出来）
