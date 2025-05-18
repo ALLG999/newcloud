@@ -32,31 +32,22 @@
 ^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
   
 [filter_remote]
-# 广告域名拦截（注意不再包含以下白名单）
 ^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|byteimg|fqnovelpic|fqnovel|bytescm|bytetos|volccdn|volcengine|bytegecko|bytegoofy)\.com\/.*ad.* url reject-200
 ^https?:\/\/mcs\.snssdk\.com url reject-200
 ^https?:\/\/normal\.(zijieapi|fqnovel)\.com url reject-200
 ^https?:\/\/lq\.(fqnovel|snssdk)\.com url reject-200
 ^https?:\/\/i-lq\.snssdk\.com url reject-200
 
-# 直播流广告
 ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad|web\.business\.image|ad-app-package)\/.+ - reject
 ^https?:\/\/.+\.byteimg.com\/tos-cn-i-1yzifmftcy\/.+\.jpeg - reject
 ^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from=ad - reject
 ^https?:\/\/.+\.snssdk\.com\/api\/ad\/.+ - reject
 
-# 请求头处理
-//^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
+^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
 
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
 
-# ✅ 白名单
-DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
-DOMAIN,tp-pay.snssdk.com,DIRECT
-DOMAIN,lf-cdn-tos.bytescm.com,DIRECT
-
-# 精准域名拦截（剔除白名单域名）
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
 DOMAIN,mcs.snssdk.com,REJECT
@@ -78,6 +69,14 @@ DOMAIN,volccdn.com,REJECT
 DOMAIN,bytetos.com,REJECT
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
+
+# ✅ 白名单域名（确保小说正常加载）
+DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
+DOMAIN,tp-pay.snssdk.com,DIRECT
+DOMAIN,lf-cdn-tos.bytescm.com,DIRECT
+DOMAIN,tnc0-aliec2.zijieapi.com,DIRECT
+DOMAIN,tnc0-alisc1.zijieapi.com,DIRECT
+DOMAIN,tnc0-bjlgy.zijieapi.com,DIRECT
 
 [MITM]
 hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
