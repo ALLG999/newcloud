@@ -19,168 +19,67 @@
 */
 #!name=番茄小说
 #!desc=番茄小说去广告
+
 [rewrite_local]
-# 本地svip显示（并没有这能力做出来，哈哈哈）
-//^https?:\/\/.*\/(user\/vip_info|vip\/user_info).*$ script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
-//^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
-
+# VIP伪装 & 抖音/番茄小说广告脚本替换
+^https?:\/\/.*\/(user\/vip_info|vip\/user_info).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
+^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
 ^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
-//⬇️如果抖音直播频繁刷出，可以考虑开启这一条，毁天灭地。
-//^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
-^https?:\/\/.*\.ecombdimg\.com\/.*ad.* url reject-200
-^https?:\/\/.*\.bdurl\.net\/.*ad.* url reject-200
-^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*live.* url reject-200
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* url reject-200
-^https?:\/\/(.*pangolin-sdk-toutiao.*)\.com\/.* url reject-200
-^https?:\/\/.*\.oceanengine.com url reject-200
-^https?:\/\/.*\.zijieapi.com url reject-200
-^https?:\/\/.*\.fqnovelpic.com url reject-200
-^https?:\/\/.*\.ecombdimg.com url reject-200
-^https?:\/\/.*\.snssdk.com url reject-200
-^https?:\/\/mcs.snssdk.com url reject-200
-^https?:\/\/.*\.fqnovel.com url reject-200
-^https?:\/\/.*\.fqnovelpic.com url reject-200
-^https?:\/\/.*\.bytescm.com url reject-200
-^https?:\/\/.*\.byteimg.com url reject-200
-^https?:\/\/.*\.safebrowsing.apple url reject-200
-^https?:\/\/.*\.amemv.com url reject-200
-^https?:\/\/.*\.bytegecko.com url reject-200
-^https?:\/\/.*\.bdurl.net url reject-200
-^https?:\/\/.*\.ecombdapi.com url reject-200
-^https?:\/\/.*\.ecombdimg.com url reject-200
 
-^https?:\/\/.*\.pangolin-sdk-toutiao-a.com url reject-200
-^https?:\/\/.*\.pangolin-sdk-toutiao-b.com url reject-200
-^https?:\/\/.*\.pangolin-sdk-toutiao-c.com url reject-200
-//火山
-^https?:\/\/.*\.bytegecko.com url reject-200
-^https?:\/\/.*\.volcanicengine.com url reject-200
-^https?:\/\/.*\.bytetos.com url reject-200
-^https?:\/\/.*\.volccdn.com url reject-200
-^https?:\/\/.*\.bytegoofy.com url reject-200
-^https?:\/\/.*\.volcengine.com url reject-200
+# 可选：抖音直播彻底拦截（副作用：直播功能无法使用）
+# ^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
 
+# 常规广告拦截（部分基于域名关键字 ad）
+^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|byteimg|oceanengine|fqnovelpic|fqnovel|bytescm|bytetos|volccdn|volcengine|bytegecko|bytegoofy)\.com\/.*ad.* url reject-200
+^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|fqnovel|byteimg)\.com\/.* url reject-200
+^https?:\/\/mcs\.snssdk\.com url reject-200
+^https?:\/\/normal\.(zijieapi|fqnovel)\.com url reject-200
+^https?:\/\/lq\.(fqnovel|snssdk)\.com url reject-200
+^https?:\/\/i-lq\.snssdk\.com url reject-200
 
-^https?:\/\/.*\.zijieapi\.com\/.*ad.* url reject-200
-^https?:\/\/.*\.zijieapi\.com\/.*api.* url reject-200
-^https?:\/\/.*\.zijieapi\.com\/.*sdk.* url reject-200
-^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*ad.* url reject-200
-^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*api.* url reject-200
-^https?:\/\/.*\.pangolin-sdk-toutiao\.com\/.*sdk.* url reject-200
-^https?:\/\/.*\.wcp.taobao.com\/.*adstrack.* url reject-200
+# 抖音 Webcast 直播广告流（MP4）
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad|web\.business\.image|ad-app-package)\/.+ - reject
+^https?:\/\/.+\.byteimg.com\/tos-cn-i-1yzifmftcy\/.+\.jpeg - reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from=ad - reject
+^https?:\/\/.+\.snssdk\.com\/api\/ad\/.+ - reject
 
-^https?:\/\/.*\.*pangolin-sdk-toutiao1.*\.com*\/.* url reject-200
-^https?:\/\/.*\.*toutiao.*\.com\/.*\.png$ url reject-200 
-^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpg$ url reject-200 
-^https?:\/\/.*\.*toutiao.*\.com\/.*\.jpeg$ url reject-200 
-^https?:\/\/.+\.*webcast.*\.douyin.com url reject-200 
+# 抖音请求头劫持脚本
 ^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
-^https?:\/\/.*\.pangolin-sdk-toutiao.com url reject-200 
-//^https?:\/\/.*\.pangolin-sdk-toutiao.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
-         
-^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
-^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject
-^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject
-^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
-^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
-^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track-log\/src\/.+ - reject
-^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
-^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
-^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
-^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
-^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
-^https?:\/\/normal\.zijieapi\.com - reject
-^https?:\/\/lq\.fqnovel\.com - reject 
-^https?:\/\/normal\.fqnovel\.com - reject 
-^https?:\/\/api\.pangolin-sdk-toutiao\.com - reject 
-^https?:\/\/api\.pangolin-sdk-toutiao1\.com - reject 
-^https?:\/\/lq\.snssdk\.com - reject 
-^https?:\/\/i-lq\.snssdk\.com - reject 
-^https?:\/\/api\.fqnovel\.com - reject 
+
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
+
+DOMAIN-KEYWORD,zijieapi,REJECT
+DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
+DOMAIN-KEYWORD,dig.bdurl.net,REJECT
+DOMAIN-KEYWORD,is.snssdk.com,REJECT
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
-DOMAIN,ads0-normal-lq.zijieapi.com,REJECT
-DOMAIN,ads1-normal-lq.zijieapi.com,REJECT
-DOMAIN,ads2-normal-lq.zijieapi.com,REJECT
-DOMAIN,ads3-normal-lq.zijieapi.com,REJECT
-DOMAIN,ads4-normal-lq.zijieapi.com,REJECT
-DOMAIN,ads5-normal-lq.zijieapi.com,REJECT
-DOMAIN,api0-normal-sinfonlinea.fqbovel.com,REJECT
-DOMAIN,api1-normal-sinfonlinea.fqbovel.com,REJECT
-DOMAIN,api2-normal-sinfonlinea.fqbovel.com,REJECT
-DOMAIN,api3-normal-sinfonlinea.fqbovel.com,REJECT
-DOMAIN,api4-normal-sinfonlinea.fqbovel.com,REJECT
-DOMAIN,api5-normal-sinfonlinea.fqbovel.com,REJECT
-DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
-DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
-DOMAIN,i-lq-snssdk.com,REJECT
-DOMAIN-SUFFIX,byteimg.com,DIRECT
+DOMAIN,mcs.snssdk.com,REJECT
 DOMAIN,i.snssdk.com,REJECT
 DOMAIN,i-lq.snssdk.com,REJECT
-DOMAIN,dig.bdurl.net,REJECT
-DOMAIN-KEYWORD,zijieapi,REJECT
-DOMAIN,activity-ag.awemeughun.com,REJECT
-DOMAIN,mcs.snssdk.com,REJECT
-DOMAIN,tnc3-alisc1.snssdk.com,REJECT
-DOMAIN,security-lq.snssdk.com,REJECT
-DOMAIN,tnc3-aliec2.snssdk.com,REJECT
-DOMAIN,tnc3-aliec3.snssdk.com,REJECT
-DOMAIN,tnc0-aliec1.snssdk.com,REJECT
-DOMAIN,tnc0-aliec2.snssdk.com,REJECT
-DOMAIN,tnc0-aliec3.snssdk.com,REJECT
-DOMAIN,tnc1-aliec1.snssdk.com,REJECT
-DOMAIN,tnc1-aliec2.snssdk.com,REJECT
-DOMAIN,tnc1-aliec3.snssdk.com,REJECT
-DOMAIN,tnc2-aliec1.snssdk.com,REJECT
-DOMAIN,tnc2-aliec2.snssdk.com,REJECT
-DOMAIN,tnc2-aliec3.snssdk.com,REJECT
-DOMAIN,tnc0-aliec1.zijieapi.com,REJECT
-DOMAIN,tnc0-aliec2.zijieapi.com,REJECT
-DOMAIN,tnc0-aliec3.zijieapi.com,REJECT
-DOMAIN,tnc1-aliec1.zijieapi.com,REJECT
-DOMAIN,tnc1-aliec2.zijieapi.com,REJECT
-DOMAIN,tnc1-aliec3.zijieapi.com,REJECT
-DOMAIN,tnc2-aliec1.zijieapi.com,REJECT
-DOMAIN,tnc2-aliec2.zijieapi.com,REJECT
-DOMAIN,tnc2-aliec3.zijieapi.com,REJECT
-DOMAIN,tnc3-aliec1.zijieapi.com,REJECT
-DOMAIN,tnc3-aliec2.zijieapi.com,REJECT
-DOMAIN,tnc3-aliec3.zijieapi.com,REJECT
-DOMAIN,is.snssdk.com,REJECT
-DOMAIN,i.snssdk.com,REJECT
 DOMAIN,v6-novelapp.ixigua.com,REJECT
-DOMAIN,*novelapp.ixigua.com,REJECT
-DOMAIN,*default.ixigua.com,REJECT
-DOMAIN,msync-im1-vip6-std.easemob.com,REJECT
-DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
-DOMAIN,api.iegadp.qq.com,REJECT
-DOMAIN,sf3-ttcdn-tos.pstatp.com,REJECT
-DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
-DOMAIN-SUFFIX,byteorge.com,REJECT
-DOMAIN-SUFFIX,bytegoofy.com,REJECT
-DOMAIN-SUFFIX,bytedance.com,REJECT
-DOMAIN,360buyimg.com,REJECT
-DOMAIN,buysecm.com,REJECT
-DOMAIN,snssdk.com,REJECT
-DOMAIN,fqnovel.com,REJECT
-DOMAIN,fqnovelpic.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
 DOMAIN,byteimg.com,REJECT
 DOMAIN,bdurl.net,REJECT
+DOMAIN,fqnovel.com,REJECT
+DOMAIN,fqnovelpic.com,REJECT
 DOMAIN,ecombdapi.com,REJECT
-IP-CIDR,49.71.37.101/32,REJECT,no-resolve
-IP-CIDR,117.71.105.23/32,REJECT,no-resolve
-IP-CIDR,218.94.207.205/32,REJECT,no-resolve
-IP-CIDR,117.92.229.188/32,REJECT,no-resolve
-IP-CIDR,101.36.166.16/32,REJECT,no-resolve
-IP-CIDR,180.96.2.114/32,REJECT,no-resolve
-DOMAIN-KEYWORD,dig.zjurl.cn
-DOMAIN-KEYWORD,dig.bdurl.net
-AND,((DOMAIN-KEYWORD,zijieapi),(DOMAIN-KEYWORD,ad))
-DOMAIN-KEYWORD,is.snssdk.com
+DOMAIN,ecombdimg.com,REJECT
+DOMAIN,bytegoofy.com,REJECT
+DOMAIN,bytegecko.com,REJECT
+DOMAIN,volcengine.com,REJECT
+DOMAIN,volccdn.com,REJECT
+DOMAIN,bytetos.com,REJECT
+DOMAIN,360buyimg.com,REJECT
+DOMAIN,api.iegadp.qq.com,REJECT
+# 域名关键字眼拦截，ps：其他软件可能出问题
+DOMAIN-KEYWORD,api,REJECT
+DOMAIN-KEYWORD,sdk,REJECT
+DOMAIN-KEYWORD,ad,REJECT
+DOMAIN-KEYWORD,video,REJECT
+DOMAIN-KEYWORD,img,REJECT
+DOMAIN-KEYWORD,live,REJECT
 [MITM]
-hostname = %APPEND% .pangolin-sdk-toutiao,*.ecombdimg.com,*.douyin.com,*.ihunantv.com,ecombdapi.com,bdurl.net,byteimg.com,fqnovel.com,fqnovelpic.com,pangolin-sdk-toutiao.com,.pstatp.com,.pstatp.com.,.pglstatp-toutiao.com.,.pglstatp-toutiao.com,*.snssdk.com,*default.ixigua.com,.360buyimg.com,*.zijieapi.com,.buysecm.com,wcp.taobao.com
+hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
