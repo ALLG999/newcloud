@@ -50,13 +50,15 @@
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告
 
-# 放行小说接口域名
+# 放行小说关键接口（避免误杀）
 DOMAIN,tn3-alisc1-zijieapi.com,DIRECT
+DOMAIN,tp-pay.snssdk.com,DIRECT
 
-# 拦截疑似广告接口
+# 继续拦截疑似广告接口
 DOMAIN,api5-normal-sinfonlinea.fqnovel.com,REJECT
 
-# 拦截已知广告域名
+# 其他已知广告域名
+DOMAIN-KEYWORD,zijieapi,REJECT
 DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
 DOMAIN-KEYWORD,dig.bdurl.net,REJECT
 DOMAIN-KEYWORD,is.snssdk.com,REJECT
@@ -82,14 +84,7 @@ DOMAIN,bytetos.com,REJECT
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
 
-# 精准拦截与放行 - 避免误杀含 zijieapi 的小说接口
-DOMAIN,tn3-alisc1-zijieapi.com,DIRECT
-# 拦截其他可能广告子域
-DOMAIN,ad.zijieapi.com,REJECT
-DOMAIN,ads.zijieapi.com,REJECT
-DOMAIN,banner.zijieapi.com,REJECT
-
-# 关键词拦截（去掉“zijieapi”避免误杀）
+# 关键词拦截
 DOMAIN-KEYWORD,api,REJECT
 DOMAIN-KEYWORD,sdk,REJECT
 DOMAIN-KEYWORD,ad,REJECT
