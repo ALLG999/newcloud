@@ -19,7 +19,7 @@
 */
 #!name=番茄小说
 #!desc=番茄小说去广告
-
+  /*
 [rewrite_local]
 # VIP伪装 & 抖音/番茄小说广告脚本替换
 ^https?:\/\/.*\/(user\/vip_info|vip\/user_info).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
@@ -48,8 +48,8 @@
 ^https?:\/\/mcs\.snssdk\.com url reject-200
 ^https?:\/\/(normal|lq)\.(zijieapi|fqnovel)\.com url reject-200
 ^https?:\/\/i-lq\.snssdk\.com url reject-200
+*/
 
-  /*
 [filter_local]
 PROCESS-NAME,com.dragon.read,番茄小说广告屏蔽
 
@@ -92,6 +92,6 @@ DOMAIN,api.iegadp.qq.com,REJECT
 DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
 DOMAIN,tp-pay.snssdk.com,DIRECT
 DOMAIN,lf-cdn-tos.byescm.com,DIRECT
-*/
+
 [MITM]
 hostname = %APPEND%,*.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao-a.com,*.pangolin-sdk-toutiao-b.com,*.pangolin-sdk-toutiao-c.com,*.ecombdimg.com,*.douyin.com,*.snssdk.com,*.pglstatp-toutiao.com,*.pstatp.com,*.zijieapi.com,*.byteimg.com,*.bdurl.net,*.ecombdapi.com,*.volcengine.com,*.volccdn.com,*.bytegecko.com,*.bytetos.com,*.bytegoofy.com,*.fqnovel.com,*.fqnovelpic.com,*.ixigua.com,*.buysecm.com,wcp.taobao.com,*.360buyimg.com
