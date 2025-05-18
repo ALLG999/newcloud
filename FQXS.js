@@ -46,7 +46,7 @@
 ^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
 
 [filter_local]
-PROCESS-NAME,com.dragon.read,番茄小说广告
+PROCESS-NAME,com.dragon.read,番茄分流
 
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
 DOMAIN,p9-ad-sign.byteimg.com,REJECT
