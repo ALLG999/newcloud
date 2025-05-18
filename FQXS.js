@@ -125,24 +125,17 @@ DOMAIN-KEYWORD,dig.bdurl.net,REJECT
 DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
 DOMAIN-KEYWORD,is.snssdk.com,REJECT
 
+# 关键词拦截
+DOMAIN-KEYWORD,api,REJECT
+DOMAIN-KEYWORD,sdk,REJECT
+DOMAIN-KEYWORD,ad,REJECT
+DOMAIN-KEYWORD,video,REJECT
+DOMAIN-KEYWORD,img,REJECT
+DOMAIN-KEYWORD,live,REJECT
+
 # 细粒度过滤（域名与关键字组合）
 AND,((DOMAIN-KEYWORD,zijieapi),(DOMAIN-KEYWORD,ad)),REJECT
 
 
 [MITM]
-hostname = %APPEND%
-*.pangolin-sdk-toutiao.com,
-*.douyin.com,
-*.snssdk.com,
-*.ecombdimg.com,
-*.zijieapi.com,
-*.fqnovel.com,
-*.fqnovelpic.com,
-*.byteimg.com,
-*.pstatp.com,
-*.pglstatp-toutiao.com,
-gurd.snssdk.com,
-default.ixigua.com,
-buysecm.com,
-wcp.taobao.com,
-360buyimg.com
+hostname = %APPEND% *.pangolin-sdk-toutiao.com,*.douyin.com,*.snssdk.com,*.ecombdimg.com,*.zijieapi.com,*.fqnovel.com,*.fqnovelpic.com,*.byteimg.com,*.pstatp.com,*.pglstatp-toutiao.com,gurd.snssdk.com,default.ixigua.com,buysecm.com,wcp.taobao.com,360buyimg.com
