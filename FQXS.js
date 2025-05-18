@@ -25,32 +25,41 @@
 ^https?:\/\/.*\/(user\/vip_info|vip\/user_info).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQBDHY.js
 ^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
 ^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
-^https?:\/\/.*\/(ad|advertisement|commercial|feed|launch|start)\/?.* url reject-200
+# 🛑 注意！不再使用误伤严重的宽泛拦截规则
+# ^https?:\/\/.*\/(ad|advertisement|commercial|feed|launch|start)\/?.* url reject-200 ←已删除
+
 # 可选：抖音直播彻底拦截（副作用：直播功能无法使用）
 ^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
 
-[filter_remote]
-# 常规广告拦截（部分基于域名关键字 ad）
-^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|byteimg|oceanengine|fqnovelpic|fqnovel|bytescm|bytetos|volccdn|volcengine|bytegecko|bytegoofy)\.com\/.*ad.* url reject-200
+# 广告域名精准拦截
+^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|fqnovelpic|fqnovel|byteimg|oceanengine|bytescm|bytetos|volccdn|volcengine|bytegecko|bytegoofy)\.com\/.*ad.* url reject-200
 ^https?:\/\/.*\.(pangolin-sdk-toutiao|ecombdimg|bdurl|snssdk|zijieapi|fqnovel|byteimg)\.com\/.* url reject-200
-^https?:\/\/mcs\.snssdk\.com url reject-200
-^https?:\/\/normal\.(zijieapi|fqnovel)\.com url reject-200
-^https?:\/\/lq\.(fqnovel|snssdk)\.com url reject-200
-^https?:\/\/i-lq\.snssdk\.com url reject-200
 
-# 抖音 Webcast 直播广告流（MP4）
+# 抖音视频广告资源
 ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad|web\.business\.image|ad-app-package)\/.+ - reject
 ^https?:\/\/.+\.byteimg.com\/tos-cn-i-1yzifmftcy\/.+\.jpeg - reject
 ^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from=ad - reject
 ^https?:\/\/.+\.snssdk\.com\/api\/ad\/.+ - reject
 
-# 抖音请求头劫持脚本
+# 请求头劫持脚本（伪装 UA）
 ^https?:\/\/.*\.zijieapi.*\.com.* url script-request-header https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQLJ.js
 
-[filter_local]
-PROCESS-NAME,com.dragon.read,番茄小说广告
+# 加载缓慢/无响应的广告平台
+^https?:\/\/mcs\.snssdk\.com url reject-200
+^https?:\/\/(normal|lq)\.(zijieapi|fqnovel)\.com url reject-200
+^https?:\/\/i-lq\.snssdk\.com url reject-200
 
-# 已知广告域名精准拦截
+[filter_local]
+PROCESS-NAME,com.dragon.read,番茄小说广告屏蔽
+
+# 🔥 关键词拦截（保留核心，避免过度）
+DOMAIN-KEYWORD,ad,REJECT
+DOMAIN-KEYWORD,sdk,REJECT
+DOMAIN-KEYWORD,video,REJECT
+DOMAIN-KEYWORD,img,REJECT
+DOMAIN-KEYWORD,live,REJECT
+
+# 📛 广告域名拦截
 DOMAIN-KEYWORD,zijieapi,REJECT
 DOMAIN-KEYWORD,dig.zjurl.cn,REJECT
 DOMAIN-KEYWORD,dig.bdurl.net,REJECT
@@ -78,7 +87,7 @@ DOMAIN,bytetos.com,REJECT
 DOMAIN,360buyimg.com,REJECT
 DOMAIN,api.iegadp.qq.com,REJECT
 
-# 白名单，确保正常加载
+# ✅ 白名单域名（重要接口允许通过）
 DOMAIN,tnc3-alisc1.zijieapi.com,DIRECT
 DOMAIN,tp-pay.snssdk.com,DIRECT
 DOMAIN,lf-cdn-tos.byescm.com,DIRECT
