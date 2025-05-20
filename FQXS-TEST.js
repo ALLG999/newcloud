@@ -93,8 +93,8 @@
 # =========================
 [filter_local]
 
-# 📱 进程名过滤（确保模块识别）
-PROCESS-NAME,com.dragon.read,番茄小说
+#  ✅ 关键新增：番茄小说 App 主体走直连
+PROCESS-NAME,com.dragon.read,DIRECT
 
 # 📍 精准域名拦截
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
