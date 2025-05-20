@@ -34,8 +34,8 @@
 #!name=番茄小说
 #!desc=番茄小说去广告
 [filter_remote]
-https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list, tag=番茄分流, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list, tag=番茄去广告, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+//https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list, tag=番茄分流, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+//https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list, tag=番茄去广告, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
          
 [rewrite_local]
 
@@ -146,12 +146,12 @@ DOMAIN,360buyimg.com,REJECT
 DOMAIN,buysecm.com,REJECT
 
 # 📌 泛关键词拦截（低精度但广覆盖）
-DOMAIN-KEYWORD,zijieapi,REJECT
-DOMAIN-KEYWORD,api,REJECT
-DOMAIN-KEYWORD,sdk,REJECT
-DOMAIN-KEYWORD,ad,REJECT
-DOMAIN-KEYWORD,video,REJECT
-DOMAIN-KEYWORD,img,REJECT
+//DOMAIN-KEYWORD,zijieapi,REJECT
+//DOMAIN-KEYWORD,api,REJECT
+//DOMAIN-KEYWORD,sdk,REJECT
+//DOMAIN-KEYWORD,ad,REJECT
+//DOMAIN-KEYWORD,video,REJECT
+//DOMAIN-KEYWORD,img,REJECT
 
 # 🧭 特定 IP 黑名单（静态封锁某些广告节点）
 IP-CIDR,49.71.37.101/32,REJECT,no-resolve
