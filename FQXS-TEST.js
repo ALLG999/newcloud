@@ -24,7 +24,7 @@ DOMAIN-KEYWORD,ad,REJECT
 DOMAIN-KEYWORD,sdk,REJECT
 
 [rewrite_local]
-
+^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
 
 [MITM]
 hostname = %APPEND%,*.fqnovel.com,*.zijieapi.com,*.pangolin-sdk-toutiao.com
