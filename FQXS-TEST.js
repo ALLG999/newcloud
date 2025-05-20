@@ -47,10 +47,10 @@
 ^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/.* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXSHY.JS
 
 # 🎥 抖音推荐/搜索等广告内容脚本处理
-^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
+//^https:\/\/(.pangolin-sdk-toutiao|.*douyin.*|.snssdk|pglstatp-toutiao)\.com\/(search|recommend|feed).* script-response-body https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/DYZB.js
 
 # ⚠️【可选】抖音直播广告极限拦截（会导致无法观看直播）
-^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
+//^https?:\/\/(live|.*douyin.*)\.com\/.* url reject-200
 
 # 📸 图文类广告 URL 拦截（通用广告链接）
 ^https?:\/\/.*\.ecombdimg\.com\/.*ad.* url reject-200
