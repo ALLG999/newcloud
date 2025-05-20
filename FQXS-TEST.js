@@ -29,7 +29,6 @@
          我的✅ 领取我的今日专属福利❌ 
 配合以下分流食用更香哦！（勾选策略偏好--REJECT）
          https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list
-         https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list
 这是测试版（不稳定，不定时更新）
          https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXS-TEST.js
 */
