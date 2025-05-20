@@ -30,12 +30,14 @@
 配合以下分流食用更香哦！（勾选策略偏好--REJECT）
          https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list
          https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list
+这是测试版（不稳定，不定时更新）
+         https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXS-TEST.js
 */
 #!name=番茄小说
 #!desc=番茄小说去广告
 [filter_remote]
-https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list, tag=番茄分流, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list, tag=番茄去广告, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+//https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list, tag=番茄分流, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+//https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list, tag=番茄去广告, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
          
 [rewrite_local]
 
