@@ -1,4 +1,3 @@
-
 /*
 脚本功能：番茄去广告
 下载地址：appstore
@@ -32,6 +31,9 @@
          https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQFL.list
 这是测试版（不稳定，不定时更新）
          https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXS-TEST.js
+这是LOON版（CHATGPT转译）
+         https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXS-LOON.js
+如果你有什么软件需要去广告的，可以联系我尝试制作一个。（我是新手！）
 */
 #!name=番茄小说
 #!desc=番茄小说去广告
