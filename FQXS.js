@@ -33,6 +33,9 @@
          https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXS-TEST.js
 这是LOON版（CHATGPT转译）
          https://raw.githubusercontent.com/ALLG999/newcloud/refs/heads/master/FQXS-LOON.js
+
+2025-5-29：这几天测试了汽水音乐，发现不弹【免】字，但是也能听vip歌曲，大伙可以测试下行不行。ps：我免广告有二十几天，测试结果不一定准确，最好是没有任何会员和免广告权限的号测试，欢迎反馈！
+         
 如果你有什么软件需要去广告的，可以联系我尝试制作一个。（我是新手！）
 */
 #!name=番茄小说
@@ -150,12 +153,12 @@ DOMAIN,360buyimg.com,REJECT
 DOMAIN,buysecm.com,REJECT
 
 # 📌 泛关键词拦截（低精度但广覆盖）
-DOMAIN-KEYWORD,zijieapi,REJECT
-DOMAIN-KEYWORD,api,REJECT
-DOMAIN-KEYWORD,sdk,REJECT
-DOMAIN-KEYWORD,ad,REJECT
-DOMAIN-KEYWORD,video,REJECT
-DOMAIN-KEYWORD,img,REJECT
+//DOMAIN-KEYWORD,zijieapi,REJECT
+//DOMAIN-KEYWORD,api,REJECT
+//DOMAIN-KEYWORD,sdk,REJECT
+//DOMAIN-KEYWORD,ad,REJECT
+//DOMAIN-KEYWORD,video,REJECT
+//DOMAIN-KEYWORD,img,REJECT
 
 # 🧭 特定 IP 黑名单（静态封锁某些广告节点）
 IP-CIDR,49.71.37.101/32,REJECT,no-resolve
